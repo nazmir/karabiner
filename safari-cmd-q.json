@@ -1,0 +1,41 @@
+{
+  "title": "Prevent accidental command-q in Safari (rev 2)",
+  "rules": [
+    {
+      "description": "Quit Safari by holding command-q",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Safari$"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to_if_held_down": [
+            {
+              "key_code": "q",
+              "modifiers": [
+                "left_command"
+              ],
+              "repeat": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
