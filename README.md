@@ -7,6 +7,6 @@ Install Karabiner Elements
 In the menubar click Karabiner icon and click preferences.
 
 Go to 'Misc' tab and click Open Karabiner folder (usually at ~/.config/karabiner)
-copy and paste the json file there.
+copy and paste the json file to Assets -> complex_modifications.
 
 And you can now enable the modification.
